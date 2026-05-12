@@ -161,6 +161,16 @@ npm run seed
 
 ---
 
+## Public Frontend
+
+Sovereign now includes a Next.js public frontend in `apps/web` for reader discovery, multilingual platform positioning, creator onboarding, sign-up/sign-in flows, and DPDP-aware trust messaging.
+
+```bash
+pnpm web:dev         # run the public frontend locally
+pnpm web:build       # build the Next.js app
+pnpm web:type-check  # type-check the frontend
+```
+
 ## Editor Workspace
 
 Sovereign includes an optional LangChain Open Canvas editor wrapper in `apps/editor`. Use it when creators need an AI-assisted canvas for drafting and revising articles before publishing them through Sovereign.
@@ -172,7 +182,7 @@ pnpm editor:dev:agents  # run LangGraph agents
 pnpm editor:dev:web     # run the editor UI
 ```
 
-See [`docs/open-canvas-editor.md`](./docs/open-canvas-editor.md) and [`apps/editor/README.md`](./apps/editor/README.md) for setup, environment, and production notes.
+See [`docs/public-frontend.md`](./docs/public-frontend.md) for frontend details, plus [`docs/open-canvas-editor.md`](./docs/open-canvas-editor.md) and [`apps/editor/README.md`](./apps/editor/README.md) for editor setup, environment, and production notes.
 
 ## Project Structure
 

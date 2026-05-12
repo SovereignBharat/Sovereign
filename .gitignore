@@ -15,3 +15,6 @@ coverage/
 
 # Editor checkout created by apps/editor setup scripts
 apps/editor/open-canvas/
+
+# TypeScript incremental state
+*.tsbuildinfo
