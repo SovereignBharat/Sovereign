@@ -163,7 +163,7 @@ npm run seed
 
 ## Public Frontend
 
-Sovereign now includes a Next.js public frontend in `apps/web` for reader discovery, multilingual platform positioning, creator onboarding, and DPDP-aware trust messaging.
+Sovereign now includes a Next.js public frontend in `apps/web` for reader discovery, multilingual platform positioning, creator onboarding, sign-up/sign-in flows, and DPDP-aware trust messaging.
 
 ```bash
 pnpm web:dev         # run the public frontend locally

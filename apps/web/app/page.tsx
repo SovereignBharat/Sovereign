@@ -22,9 +22,12 @@ export default function Home() {
             </a>
           ))}
         </nav>
-        <a className="header-cta" href="#creators">
-          Start writing
-        </a>
+        <div className="header-actions">
+          <a href="/sign-in">Sign in</a>
+          <a className="header-cta" href="/sign-up">
+            Start writing
+          </a>
+        </div>
       </header>
 
       <section id="top" className="hero section-shell">
@@ -42,8 +45,8 @@ export default function Home() {
             <a className="button button-primary" href="#discover">
               Explore stories
             </a>
-            <a className="button button-secondary" href="#creators">
-              Open creator tools
+            <a className="button button-secondary" href="/sign-up">
+              Create account
             </a>
           </div>
         </div>
