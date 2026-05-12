@@ -36,7 +36,10 @@
     "editor:build": "pnpm --filter @sovereign/editor build",
     "editor:dev:agents": "pnpm --filter @sovereign/editor dev:agents",
     "editor:dev:web": "pnpm --filter @sovereign/editor dev:web",
-    "editor:validate": "pnpm --filter @sovereign/editor validate"
+    "editor:validate": "pnpm --filter @sovereign/editor validate",
+    "web:dev": "pnpm --filter @sovereign/web dev",
+    "web:build": "pnpm --filter @sovereign/web build",
+    "web:type-check": "pnpm --filter @sovereign/web type-check"
   },
   "devDependencies": {
     "@turbo/gen": "^1.12.0",
