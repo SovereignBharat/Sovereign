@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+.turbo/
+dist/
+build/
+.next/
+coverage/
+
+# Environment files
+.env
+.env.*.local
+
+# Editor checkout created by apps/editor setup scripts
+apps/editor/open-canvas/

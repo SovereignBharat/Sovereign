@@ -31,7 +31,12 @@
     "db:studio": "cd apps/api && pnpm db:studio",
     "clean": "turbo run clean && rm -rf node_modules .turbo",
     "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install 2>/dev/null || true"
+    "prepare": "husky install 2>/dev/null || true",
+    "editor:setup": "pnpm --filter @sovereign/editor setup",
+    "editor:build": "pnpm --filter @sovereign/editor build",
+    "editor:dev:agents": "pnpm --filter @sovereign/editor dev:agents",
+    "editor:dev:web": "pnpm --filter @sovereign/editor dev:web",
+    "editor:validate": "pnpm --filter @sovereign/editor validate"
   },
   "devDependencies": {
     "@turbo/gen": "^1.12.0",
