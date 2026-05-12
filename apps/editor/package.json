@@ -1,0 +1,15 @@
+{
+  "name": "@sovereign/editor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sovereign editor integration wrapper for LangChain Open Canvas",
+  "license": "MIT",
+  "scripts": {
+    "setup": "./scripts/setup-open-canvas.sh",
+    "build": "cd open-canvas && yarn build",
+    "dev:agents": "cd open-canvas/apps/agents && yarn dev",
+    "dev:web": "cd open-canvas/apps/web && yarn dev",
+    "validate": "node ./scripts/validate-open-canvas-wrapper.mjs",
+    "clean": "rm -rf open-canvas"
+  }
+}

@@ -11,6 +11,7 @@ A decentralized, multilingual publishing platform built for India — where geog
 | **Location-First** | Discover stories from your city, state, region. Local context, local voices, local impact. |
 | **Multilingual Native** | Hindi, Tamil, Telugu, Kannada, Malayalam, Marathi, Gujarati, Bengali, Punjabi, Assamese, English — auto-translated, SEO-indexed per language. |
 | **Multi-Modal Content** | Articles, video essays, podcasts, photo essays, live discussions, annotations — all first-class. |
+| **AI-Assisted Editor** | LangChain Open Canvas workspace for drafting, revising, and exporting creator articles. |
 | **Community-Owned** | Readers follow writers, highlight excerpts, tip creators, build reading lists. No algorithmic ranker — just discovery by location, language, topic. |
 | **SEO-Optimized** | Every article is hreflang-tagged, location-tagged, language-tagged. Ranks in Google, Bing, DuckDuckGo for local searches. |
 | **DPDP-Compliant** | India's personal data protection law (DPDP Act 2023) embedded into architecture from day one. |
@@ -159,6 +160,19 @@ npm run seed
 - **Sub-processor Transparency** — All integrations (CDN, payment, email) documented
 
 ---
+
+## Editor Workspace
+
+Sovereign includes an optional LangChain Open Canvas editor wrapper in `apps/editor`. Use it when creators need an AI-assisted canvas for drafting and revising articles before publishing them through Sovereign.
+
+```bash
+pnpm editor:setup       # clone and install LangChain Open Canvas locally
+pnpm editor:build       # build the Open Canvas workspace
+pnpm editor:dev:agents  # run LangGraph agents
+pnpm editor:dev:web     # run the editor UI
+```
+
+See [`docs/open-canvas-editor.md`](./docs/open-canvas-editor.md) and [`apps/editor/README.md`](./apps/editor/README.md) for setup, environment, and production notes.
 
 ## Project Structure
 
