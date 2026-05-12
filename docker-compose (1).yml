@@ -1,0 +1,123 @@
+version: '3.9'
+
+services:
+  # PostgreSQL with PostGIS
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: sovereign-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sovereign
+      POSTGRES_PASSWORD: sovereign_dev_password
+      POSTGRES_DB: sovereign
+      POSTGRES_INITDB_ARGS: -c shared_preload_libraries=pg_stat_statements
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sovereign"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sovereign
+
+  # Meilisearch (full-text search)
+  meilisearch:
+    image: getmeili/meilisearch:v1.7
+    container_name: sovereign-search
+    restart: unless-stopped
+    environment:
+      MEILI_MASTER_KEY: dev_master_key_changeme
+      MEILI_ENV: development
+    ports:
+      - "7700:7700"
+    volumes:
+      - meilisearch_data:/meili_data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sovereign
+
+  # Redis (cache, sessions, job queue)
+  redis:
+    image: redis:7-alpine
+    container_name: sovereign-cache
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sovereign
+
+  # pgAdmin (PostgreSQL UI, optional but helpful)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: sovereign-pgadmin
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@sovereign.local
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - sovereign
+
+  # Mailhog (email testing)
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: sovereign-mail
+    restart: unless-stopped
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+    networks:
+      - sovereign
+
+  # MinIO (S3-compatible for media, optional)
+  minio:
+    image: minio/minio:latest
+    container_name: sovereign-s3
+    restart: unless-stopped
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"  # Console
+    volumes:
+      - minio_data:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sovereign
+
+volumes:
+  postgres_data:
+  meilisearch_data:
+  redis_data:
+  pgadmin_data:
+  minio_data:
+
+networks:
+  sovereign:
+    driver: bridge
