@@ -4,20 +4,28 @@ const navItems = ["Latest", "Languages", "About"];
 
 const publishingPrinciples = [
   {
-    title: "AI-native editorial workflow",
-    body: "Use AI to assist drafting, summaries, translations, metadata, and editorial checks while keeping human judgment at the center.",
+    title: "AI-native publishing workflow",
+    body: "Use AI to assist drafting, editing, summaries, translations, metadata, moderation checks, and format adaptation while keeping human judgment at the center.",
   },
   {
     title: "Multilingual by default",
-    body: "Support Indian languages as first-class publishing surfaces, not afterthoughts attached to an English-first site.",
+    body: "Support Indian languages as first-class publishing surfaces for articles, reports, newsletters, podcasts, videos, explainers, and community updates.",
   },
   {
     title: "SEO-native distribution",
-    body: "Structure every piece with clean titles, descriptions, schema, slugs, canonical URLs, and language-aware discovery.",
+    body: "Structure every published item with clean titles, descriptions, schema, slugs, canonical URLs, language variants, and search-ready metadata.",
   },
   {
     title: "Geolocation-aware context",
-    body: "Organize stories by place, region, language, and public relevance so readers can discover writing rooted in where life happens.",
+    body: "Organize content by place, region, language, and public relevance so audiences can discover publishing rooted in where life happens.",
+  },
+  {
+    title: "Analytics-native publishing",
+    body: "Give creators and editors useful engagement signals such as reads, watch time, listens, shares, saves, geography, language, referrals, and retention.",
+  },
+  {
+    title: "Multimodal formats",
+    body: "Publish more than blogs: long-form essays, short posts, reports, visual stories, video, audio, interviews, briefings, and newsletters from one system.",
   },
 ];
 
@@ -38,7 +46,7 @@ export default function Home() {
         </nav>
         <div className="header-actions">
           <a className="header-cta" href="/sign-up">
-            Submit a piece
+            Publish with Sovereign
           </a>
         </div>
       </header>
@@ -46,41 +54,44 @@ export default function Home() {
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
           <p className="eyebrow">
-            AI-native • Multilingual • SEO-native • Location-aware
+            AI-native • Multilingual • SEO-native • Geo-aware • Multimodal
           </p>
-          <h1>A professional publishing home for serious Indian writing.</h1>
+          <h1>A professional publishing platform for every serious public format.</h1>
           <p className="hero-lede">
-            Sovereign publishes essays, analysis, local stories, and public-interest
-            opinion through an AI-assisted editorial workflow built for Indian
-            languages, search discovery, and geographic context.
+            Sovereign helps creators, editors, institutions, journalists, researchers,
+            and civic voices publish articles, essays, reports, videos, podcasts,
+            newsletters, explainers, and local updates with AI assistance,
+            multilingual reach, SEO structure, geographic context, and analytics.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
             <a className="button button-primary" href="#latest">
-              Read latest pieces
+              Explore published work
             </a>
             <a className="button button-secondary" href="/sign-up">
-              Submit writing
+              Start publishing
             </a>
           </div>
         </div>
-        <aside className="hero-card" aria-label="Editorial preview">
+        <aside className="hero-card" aria-label="Publishing preview">
           <div className="card-toolbar">
             <span />
             <span />
             <span />
           </div>
           <p className="card-kicker">Publishing intelligence</p>
-          <h2>Every article carries language, SEO, and location context.</h2>
+          <h2>Every piece carries format, language, SEO, location, and engagement context.</h2>
           <p>
-            Writers can prepare strong drafts, multilingual versions, metadata,
-            regional tags, summaries, and search-ready article pages without
-            turning the publication into a noisy social feed.
+            Publish text, audio, video, reports, briefings, and visual stories
+            from one focused system — with metadata and analytics built into the
+            publishing layer instead of added later.
           </p>
           <div className="metadata-grid">
             <span>AI assisted</span>
             <span>11+ languages</span>
             <span>SEO ready</span>
             <span>Geo-aware</span>
+            <span>Analytics</span>
+            <span>Multimodal</span>
           </div>
         </aside>
       </section>
@@ -99,11 +110,12 @@ export default function Home() {
 
       <section id="latest" className="section-shell split-section">
         <div>
-          <p className="eyebrow">Latest writing</p>
-          <h2>Read essays, explainers, and opinion with editorial clarity.</h2>
+          <p className="eyebrow">Latest publishing</p>
+          <h2>One place for essays, reports, audio, video, explainers, and local updates.</h2>
           <p>
-            Sovereign keeps the site simple: a strong front page, a focused
-            stream of published pieces, and clear paths for readers and writers.
+            Sovereign keeps the reader experience focused while giving publishers
+            the flexibility to publish many formats with professional metadata,
+            discovery, and engagement intelligence.
           </p>
         </div>
         <div className="story-grid">
@@ -127,10 +139,11 @@ export default function Home() {
       <section className="section-shell language-section" aria-label="Publishing principles">
         <div className="section-heading">
           <p className="eyebrow">Platform principles</p>
-          <h2>Built for modern publishing from the first draft to discovery.</h2>
+          <h2>Built for modern publishing from creation to distribution to insight.</h2>
           <p>
             The product stays focused on publishing while making the core layer
-            intelligent, multilingual, search-friendly, and grounded in place.
+            intelligent, multilingual, search-friendly, location-aware,
+            analytics-native, and format-flexible.
           </p>
         </div>
         <div className="story-grid">
@@ -148,8 +161,9 @@ export default function Home() {
           <p className="eyebrow">Languages</p>
           <h2>Publishing for India's multilingual public sphere.</h2>
           <p>
-            The publication is built to support serious writing across Indian
-            languages while preserving regional context and editorial quality.
+            The platform is built to support serious publishing across Indian
+            languages while preserving regional context, format quality, and
+            editorial standards.
           </p>
         </div>
         <div className="language-grid">
@@ -165,12 +179,13 @@ export default function Home() {
 
       <section id="about" className="section-shell privacy-band">
         <p className="eyebrow">About Sovereign</p>
-        <h2>A publication, not another noisy social feed.</h2>
+        <h2>A publishing platform, not another noisy social feed.</h2>
         <p>
           Sovereign is designed as a professional publishing space for ideas,
-          reporting, commentary, and public-interest writing. The goal is to
-          keep the reader experience focused while making every article easier
-          to write, translate, optimize, and discover by location.
+          reporting, commentary, media, briefings, research, and public-interest
+          updates. The goal is to keep the audience experience focused while
+          making every published item easier to create, translate, optimize,
+          distribute, measure, and discover by location.
         </p>
       </section>
 
