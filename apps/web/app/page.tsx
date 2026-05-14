@@ -1,11 +1,6 @@
-import {
-  creatorWorkflow,
-  featuredStories,
-  languages,
-  platformStats,
-} from "../lib/content";
+import { featuredStories, languages, platformStats } from "../lib/content";
 
-const navItems = ["Discover", "Languages", "Creators", "Privacy"];
+const navItems = ["Latest", "Languages", "About"];
 
 export default function Home() {
   return (
@@ -23,9 +18,8 @@ export default function Home() {
           ))}
         </nav>
         <div className="header-actions">
-          <a href="/sign-in">Sign in</a>
           <a className="header-cta" href="/sign-up">
-            Start writing
+            Submit a piece
           </a>
         </div>
       </header>
@@ -33,47 +27,48 @@ export default function Home() {
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
           <p className="eyebrow">
-            Now live • Built in India • Open publishing for public voices
+            Independent publishing • Essays • Analysis • Local voices
           </p>
-          <h1>India deserves a publishing platform that starts with place, language, and trust.</h1>
+          <h1>A professional publishing home for serious Indian writing.</h1>
           <p className="hero-lede">
-            Sovereign helps writers, journalists, researchers, and civic voices
-            publish authoritative opinions for Indian readers — across local
-            languages, local communities, and public-interest topics.
+            Sovereign publishes thoughtful essays, civic analysis, local stories,
+            and opinion pieces from writers who care about public life in India.
+            One focused publication. Many languages. Clear editorial standards.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
-            <a className="button button-primary" href="#discover">
-              Explore the platform
+            <a className="button button-primary" href="#latest">
+              Read latest pieces
             </a>
             <a className="button button-secondary" href="/sign-up">
-              Become a creator
+              Submit writing
             </a>
           </div>
         </div>
-        <aside className="hero-card" aria-label="Featured publishing preview">
+        <aside className="hero-card" aria-label="Editorial preview">
           <div className="card-toolbar">
             <span />
             <span />
             <span />
           </div>
-          <p className="card-kicker">Creator preview</p>
-          <h2>Write once. Reach India in many languages.</h2>
+          <p className="card-kicker">Editorial focus</p>
+          <h2>Sharp writing with local context.</h2>
           <p>
-            Draft essays, add local context, prepare translations, and publish
-            with privacy-aware checks designed for a serious public platform.
+            Essays and explainers are organized by place, language, topic, and
+            public relevance — so readers can find work that matters without a
+            noisy feed.
           </p>
           <div className="metadata-grid">
-            <span>Kannada</span>
-            <span>Bengaluru</span>
-            <span>Public Health</span>
-            <span>DPDP Ready</span>
+            <span>Essays</span>
+            <span>Analysis</span>
+            <span>Opinion</span>
+            <span>Local context</span>
           </div>
         </aside>
       </section>
 
       <section
         className="stats-bar section-shell"
-        aria-label="Platform statistics"
+        aria-label="Publication statistics"
       >
         {platformStats.map((stat) => (
           <div key={stat.label}>
@@ -83,14 +78,13 @@ export default function Home() {
         ))}
       </section>
 
-      <section id="discover" className="section-shell split-section">
+      <section id="latest" className="section-shell split-section">
         <div>
-          <p className="eyebrow">Public platform</p>
-          <h2>Discover stories by place, language, and public relevance.</h2>
+          <p className="eyebrow">Latest writing</p>
+          <h2>Read essays, explainers, and opinion with editorial clarity.</h2>
           <p>
-            Readers can browse local reporting, civic explainers, and opinion
-            pieces through state, district, city, and topic signals. Every
-            article is designed for SEO, accessibility, and multilingual reach.
+            Sovereign keeps the site simple: a strong front page, a focused
+            stream of published pieces, and clear paths for readers and writers.
           </p>
         </div>
         <div className="story-grid">
@@ -114,10 +108,10 @@ export default function Home() {
       <section id="languages" className="section-shell language-section">
         <div className="section-heading">
           <p className="eyebrow">Languages</p>
-          <h2>Built for India's multilingual public sphere.</h2>
+          <h2>Publishing for India's multilingual public sphere.</h2>
           <p>
-            Publish in one language, localize thoughtfully, and preserve
-            regional context with language-aware metadata and reader controls.
+            The publication is built to support serious writing across Indian
+            languages while preserving regional context and editorial quality.
           </p>
         </div>
         <div className="language-grid">
@@ -131,30 +125,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="creators" className="section-shell creator-panel">
-        <div>
-          <p className="eyebrow">Creator workspace</p>
-          <h2>From AI-assisted draft to accountable publication.</h2>
-          <p>
-            The frontend introduces the public experience while connecting
-            creators to the optional LangChain Open Canvas editor wrapper for
-            rich drafting and revision workflows.
-          </p>
-        </div>
-        <ol>
-          {creatorWorkflow.map((step) => (
-            <li key={step}>{step}</li>
-          ))}
-        </ol>
-      </section>
-
-      <section id="privacy" className="section-shell privacy-band">
-        <p className="eyebrow">Trust & privacy</p>
-        <h2>DPDP-aware publishing controls from day one.</h2>
+      <section id="about" className="section-shell privacy-band">
+        <p className="eyebrow">About Sovereign</p>
+        <h2>A publication, not another noisy social feed.</h2>
         <p>
-          Sovereign keeps consent, retention, and user controls visible as
-          platform primitives—not afterthoughts. The public UI highlights
-          privacy commitments alongside local discovery and creator tools.
+          Sovereign is designed as a professional publishing space for ideas,
+          reporting, commentary, and public-interest writing. The goal is to
+          keep the reader experience focused and the editorial voice clear.
         </p>
       </section>
 
