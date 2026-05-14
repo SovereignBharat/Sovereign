@@ -2,6 +2,25 @@ import { featuredStories, languages, platformStats } from "../lib/content";
 
 const navItems = ["Latest", "Languages", "About"];
 
+const publishingPrinciples = [
+  {
+    title: "AI-native editorial workflow",
+    body: "Use AI to assist drafting, summaries, translations, metadata, and editorial checks while keeping human judgment at the center.",
+  },
+  {
+    title: "Multilingual by default",
+    body: "Support Indian languages as first-class publishing surfaces, not afterthoughts attached to an English-first site.",
+  },
+  {
+    title: "SEO-native distribution",
+    body: "Structure every piece with clean titles, descriptions, schema, slugs, canonical URLs, and language-aware discovery.",
+  },
+  {
+    title: "Geolocation-aware context",
+    body: "Organize stories by place, region, language, and public relevance so readers can discover writing rooted in where life happens.",
+  },
+];
+
 export default function Home() {
   return (
     <main>
@@ -27,13 +46,13 @@ export default function Home() {
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
           <p className="eyebrow">
-            Independent publishing • Essays • Analysis • Local voices
+            AI-native • Multilingual • SEO-native • Location-aware
           </p>
           <h1>A professional publishing home for serious Indian writing.</h1>
           <p className="hero-lede">
-            Sovereign publishes thoughtful essays, civic analysis, local stories,
-            and opinion pieces from writers who care about public life in India.
-            One focused publication. Many languages. Clear editorial standards.
+            Sovereign publishes essays, analysis, local stories, and public-interest
+            opinion through an AI-assisted editorial workflow built for Indian
+            languages, search discovery, and geographic context.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
             <a className="button button-primary" href="#latest">
@@ -50,18 +69,18 @@ export default function Home() {
             <span />
             <span />
           </div>
-          <p className="card-kicker">Editorial focus</p>
-          <h2>Sharp writing with local context.</h2>
+          <p className="card-kicker">Publishing intelligence</p>
+          <h2>Every article carries language, SEO, and location context.</h2>
           <p>
-            Essays and explainers are organized by place, language, topic, and
-            public relevance — so readers can find work that matters without a
-            noisy feed.
+            Writers can prepare strong drafts, multilingual versions, metadata,
+            regional tags, summaries, and search-ready article pages without
+            turning the publication into a noisy social feed.
           </p>
           <div className="metadata-grid">
-            <span>Essays</span>
-            <span>Analysis</span>
-            <span>Opinion</span>
-            <span>Local context</span>
+            <span>AI assisted</span>
+            <span>11+ languages</span>
+            <span>SEO ready</span>
+            <span>Geo-aware</span>
           </div>
         </aside>
       </section>
@@ -105,6 +124,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section-shell language-section" aria-label="Publishing principles">
+        <div className="section-heading">
+          <p className="eyebrow">Platform principles</p>
+          <h2>Built for modern publishing from the first draft to discovery.</h2>
+          <p>
+            The product stays focused on publishing while making the core layer
+            intelligent, multilingual, search-friendly, and grounded in place.
+          </p>
+        </div>
+        <div className="story-grid">
+          {publishingPrinciples.map((principle) => (
+            <article className="story-card" key={principle.title}>
+              <h3>{principle.title}</h3>
+              <p>{principle.body}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section id="languages" className="section-shell language-section">
         <div className="section-heading">
           <p className="eyebrow">Languages</p>
@@ -131,7 +169,8 @@ export default function Home() {
         <p>
           Sovereign is designed as a professional publishing space for ideas,
           reporting, commentary, and public-interest writing. The goal is to
-          keep the reader experience focused and the editorial voice clear.
+          keep the reader experience focused while making every article easier
+          to write, translate, optimize, and discover by location.
         </p>
       </section>
 
