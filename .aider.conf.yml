@@ -1,0 +1,13 @@
+# Aider configuration for Sovereign
+# Override locally with: aider --model <provider/model>
+
+model: gpt-4.1
+editor-model: gpt-4.1
+architect: true
+auto-commits: false
+dirty-commits: false
+map-tokens: 2048
+read:
+  - README.md
+  - apps/web/app/page.tsx
+  - apps/web/lib/tenants.ts
