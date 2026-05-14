@@ -8,6 +8,10 @@ const publishingPrinciples = [
     body: "Use AI to assist drafting, editing, summaries, translations, metadata, moderation checks, and format adaptation while keeping human judgment at the center.",
   },
   {
+    title: "Independent authoritative content",
+    body: "Sovereign is built for serious public work: authoritative essays, reports, analysis, briefings, explainers, media, and civic knowledge — not random blogging.",
+  },
+  {
     title: "Multilingual by default",
     body: "Support Indian languages as first-class publishing surfaces for articles, reports, newsletters, podcasts, videos, explainers, and community updates.",
   },
@@ -24,30 +28,35 @@ const publishingPrinciples = [
     body: "Give creators and editors useful engagement signals such as reads, watch time, listens, shares, saves, geography, language, referrals, and retention.",
   },
   {
-    title: "Boostable distribution",
-    body: "Let creators boost a published item to selected audiences, locations, topics, and languages while separating paid reach from organic performance.",
+    title: "Contextual and social organic amplification",
+    body: "Help important work travel through relevance, trusted communities, influencers, channel partners, institutions, and thought leaders — without ads or paid-feed clutter.",
   },
   {
     title: "Multimodal formats",
-    body: "Publish more than blogs: long-form essays, short posts, reports, visual stories, video, audio, interviews, briefings, and newsletters from one system.",
+    body: "Publish long-form essays, short posts, reports, visual stories, video, audio, interviews, briefings, newsletters, and civic updates from one system.",
   },
 ];
 
 const platformHubs = [
   {
     title: "Publishing+ hub",
-    body: "Create, edit, translate, package, schedule, boost, and distribute every public format from one professional publishing layer.",
-    metrics: ["Articles", "Reports", "Video", "Audio", "Newsletters", "Boosts"],
+    body: "Create, edit, translate, package, schedule, and distribute independent authoritative content across every serious public format.",
+    metrics: ["Articles", "Reports", "Video", "Audio", "Newsletters", "Briefings"],
   },
   {
     title: "Engagement tracking hub",
-    body: "Track how audiences interact with content across reads, watch time, listens, shares, saves, comments, follows, boost clicks, and return visits.",
-    metrics: ["Reads", "Watch time", "Listens", "Shares", "Saves", "Boost CTR"],
+    body: "Track how audiences interact with content across reads, watch time, listens, shares, saves, comments, follows, partner shares, and return visits.",
+    metrics: ["Reads", "Watch time", "Listens", "Shares", "Saves", "Partner shares"],
   },
   {
     title: "Performance tracking hub",
-    body: "Measure distribution and growth through SEO performance, referrals, geography, languages, retention, conversions, boosted reach, and content velocity.",
-    metrics: ["SEO", "Referrals", "Geo", "Languages", "Retention", "Boost ROI"],
+    body: "Measure distribution and growth through SEO performance, referrals, geography, languages, retention, conversions, organic amplification, and content velocity.",
+    metrics: ["SEO", "Referrals", "Geo", "Languages", "Retention", "Organic reach"],
+  },
+  {
+    title: "Contextual amplification network",
+    body: "Coordinate non-ad distribution through relevant communities, influencers, channel partners, subject experts, newsletters, institutions, and thought leaders who can carry authoritative work to the right audiences.",
+    metrics: ["Context", "Influencers", "Partners", "Experts", "Communities", "Attribution"],
   },
 ];
 
@@ -76,13 +85,14 @@ export default function Home() {
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
           <p className="eyebrow">
-            Publishing+ • Engagement tracking • Performance intelligence • Boosts
+            Independent authoritative content • AI-native • Organic amplification
           </p>
-          <h1>A professional publishing platform with intelligence built in.</h1>
+          <h1>Sovereign is a publishing platform for independent authoritative content.</h1>
           <p className="hero-lede">
-            Sovereign helps creators, editors, institutions, journalists, researchers,
-            and civic voices publish any serious format while tracking engagement,
-            performance, SEO, languages, geography, audience growth, and boosted distribution from one hub.
+            Built for India’s serious public voices — creators, editors, institutions,
+            journalists, researchers, civic leaders, and domain experts publishing
+            analysis, reports, explainers, media, and knowledge with multilingual reach,
+            geolocation context, SEO-native structure, engagement tracking, and contextual social amplification.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
             <a className="button button-primary" href="#latest">
@@ -100,17 +110,17 @@ export default function Home() {
             <span />
           </div>
           <p className="card-kicker">Publishing intelligence</p>
-          <h2>Publish, boost, measure, and improve every format from one system.</h2>
+          <h2>Publish, contextualize, amplify, measure, and improve authoritative work.</h2>
           <p>
             Sovereign combines AI-native publishing, multilingual distribution,
-            SEO structure, geolocation context, boost campaigns, engagement analytics,
-            and performance tracking without turning the product into a noisy feed.
+            SEO structure, geolocation context, social organic amplification,
+            engagement analytics, and performance tracking without ads, random posts, or a noisy feed.
           </p>
           <div className="metadata-grid">
-            <span>Publishing+</span>
-            <span>Engagement</span>
-            <span>Performance</span>
-            <span>Boost posts</span>
+            <span>Authoritative</span>
+            <span>Independent</span>
+            <span>Organic reach</span>
+            <span>Contextual</span>
             <span>Geo-aware</span>
             <span>Multimodal</span>
           </div>
@@ -132,11 +142,11 @@ export default function Home() {
       <section id="latest" className="section-shell split-section">
         <div>
           <p className="eyebrow">Latest publishing</p>
-          <h2>One place for essays, reports, audio, video, explainers, and local updates.</h2>
+          <h2>One place for serious essays, reports, media, explainers, and local knowledge.</h2>
           <p>
             Sovereign keeps the audience experience focused while giving publishers
-            the flexibility to publish many formats with professional metadata,
-            discovery, engagement tracking, boost options, and performance intelligence.
+            the infrastructure to publish authoritative work with professional metadata,
+            discovery, engagement tracking, contextual amplification, and performance intelligence.
           </p>
         </div>
         <div className="story-grid">
@@ -160,11 +170,11 @@ export default function Home() {
       <section className="section-shell language-section" aria-label="Platform hubs">
         <div className="section-heading">
           <p className="eyebrow">Platform hubs</p>
-          <h2>Publishing plus the intelligence layer publishers need.</h2>
+          <h2>Publishing plus the intelligence layer authoritative creators need.</h2>
           <p>
             Sovereign is not only where content goes live. It is where teams
-            understand what was published, who engaged, where it travelled, what
-            was boosted, and how each format performed.
+            understand what was published, who engaged, where it travelled, which
+            communities amplified it, and how each format performed.
           </p>
         </div>
         <div className="story-grid">
@@ -187,9 +197,9 @@ export default function Home() {
           <p className="eyebrow">Platform principles</p>
           <h2>Built for modern publishing from creation to distribution to insight.</h2>
           <p>
-            The product stays focused on publishing while making the core layer
-            intelligent, multilingual, search-friendly, location-aware,
-            analytics-native, boost-ready, and format-flexible.
+            The product stays focused on independent authoritative publishing while making
+            the core layer AI-native, multilingual, search-friendly, location-aware,
+            analytics-native, organically amplified, and format-flexible.
           </p>
         </div>
         <div className="story-grid">
@@ -225,13 +235,13 @@ export default function Home() {
 
       <section id="about" className="section-shell privacy-band">
         <p className="eyebrow">About Sovereign</p>
-        <h2>A Publishing+ platform, not another noisy social feed.</h2>
+        <h2>A platform for independent authoritative content, not random blogging.</h2>
         <p>
           Sovereign is designed as a professional publishing space for ideas,
           reporting, commentary, media, briefings, research, and public-interest
-          updates. The goal is to keep the audience experience focused while
+          knowledge. The goal is to keep the audience experience focused while
           making every published item easier to create, translate, optimize,
-          distribute, boost, measure, and improve through engagement and performance data.
+          distribute through trusted communities, measure, and improve through engagement and performance data.
         </p>
       </section>
 
