@@ -33,20 +33,20 @@ export default function Home() {
       <section id="top" className="hero section-shell">
         <div className="hero-copy">
           <p className="eyebrow">
-            Location-first • Multilingual • Community-owned
+            Now live • Built in India • Open publishing for public voices
           </p>
-          <h1>Publish authoritative opinions from every corner of India.</h1>
+          <h1>India deserves a publishing platform that starts with place, language, and trust.</h1>
           <p className="hero-lede">
-            Sovereign is a public knowledge platform where creators write once,
-            localize across Indian languages, and reach readers through
-            geography, trust, and community context instead of a black-box feed.
+            Sovereign helps writers, journalists, researchers, and civic voices
+            publish authoritative opinions for Indian readers — across local
+            languages, local communities, and public-interest topics.
           </p>
           <div className="hero-actions" aria-label="Hero actions">
             <a className="button button-primary" href="#discover">
-              Explore stories
+              Explore the platform
             </a>
             <a className="button button-secondary" href="/sign-up">
-              Create account
+              Become a creator
             </a>
           </div>
         </div>
@@ -56,11 +56,11 @@ export default function Home() {
             <span />
             <span />
           </div>
-          <p className="card-kicker">Now drafting in Open Canvas</p>
-          <h2>Monsoon resilience dispatch</h2>
+          <p className="card-kicker">Creator preview</p>
+          <h2>Write once. Reach India in many languages.</h2>
           <p>
-            AI-assisted editing, source notes, translations, local tags, and
-            publishing checks in one creator workflow.
+            Draft essays, add local context, prepare translations, and publish
+            with privacy-aware checks designed for a serious public platform.
           </p>
           <div className="metadata-grid">
             <span>Kannada</span>
